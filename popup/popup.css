@@ -1,0 +1,20 @@
+body { width: 380px; max-height: 560px; margin: 0; font: 13px/1.4 system-ui, sans-serif; color: #1d2330; }
+header { padding: 10px 12px 0; border-bottom: 1px solid #e3e6ec; }
+#site { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 6px; }
+nav { display: flex; gap: 4px; }
+.tab { border: 0; background: none; padding: 6px 8px; cursor: pointer; border-bottom: 2px solid transparent; }
+.tab.active { border-bottom-color: #3a5bd9; font-weight: 600; }
+.pro { font-size: 9px; background: #3a5bd9; color: #fff; border-radius: 3px; padding: 0 3px; }
+.panel { display: none; padding: 10px 12px; overflow-y: auto; max-height: 440px; }
+.panel.active { display: block; }
+.muted { color: #6b7385; font-size: 12px; }
+h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: #6b7385; margin: 10px 0 4px; }
+.tech { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px dotted #eee; }
+.tech small { color: #6b7385; }
+.row { display: flex; gap: 6px; margin-top: 8px; }
+button { cursor: pointer; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+textarea { width: 100%; box-sizing: border-box; font: 11px monospace; }
+#hiring-list { padding-left: 16px; }
+#hiring-list li { margin: 4px 0; }
+footer { padding: 6px 12px; border-top: 1px solid #e3e6ec; }

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tech Stack &amp; Hiring Profiler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <strong id="site">…</strong>
+    <nav>
+      <button class="tab active" data-tab="tech">Technologies</button>
+      <button class="tab" data-tab="hiring">Hiring <span class="pro">PRO</span></button>
+      <button class="tab" data-tab="license">License</button>
+    </nav>
+  </header>
+
+  <section id="tech" class="panel active">
+    <p id="tech-status" class="muted">Scanning this page locally…</p>
+    <div id="tech-list"></div>
+    <div class="row">
+      <button id="export-csv" class="pro-only">Export CSV</button>
+      <button id="export-json" class="pro-only">Export JSON</button>
+    </div>
+  </section>
+
+  <section id="hiring" class="panel">
+    <div id="hiring-locked">
+      <p>The Hiring tab finds the company's applicant tracking system (Greenhouse, Lever, Ashby, Recruitee, Workable, SmartRecruiters, Teamtailor, Personio) and lists its open jobs from the ATS public job-board API.</p>
+      <p>Requires a Pro license (see the License tab).</p>
+    </div>
+    <div id="hiring-open" hidden>
+      <p class="muted">On click, Chrome asks once for read access to the public ATS APIs. Only the company domain/slug is sent to the ATS; your browsing is never sent anywhere.</p>
+      <button id="hiring-run">Find open jobs</button>
+      <p id="hiring-status" class="muted"></p>
+      <div id="hiring-signal"></div>
+      <ul id="hiring-list"></ul>
+    </div>
+  </section>
+
+  <section id="license" class="panel">
+    <p id="license-status" class="muted">Free plan: technology detection.</p>
+    <label for="license-key">Pro license key</label>
+    <textarea id="license-key" rows="3" spellcheck="false" placeholder="TSH1.…"></textarea>
+    <div class="row">
+      <button id="license-save">Activate</button>
+      <button id="license-clear">Remove</button>
+    </div>
+    <p class="muted">The key is checked offline (digital signature). No account, no tracking.</p>
+  </section>
+
+  <footer class="muted">Not affiliated with the detected vendors or ATS providers. Jobs link to their source.</footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

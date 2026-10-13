@@ -1,0 +1,8 @@
+{
+  "name": "tech-stack-hiring",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension (MV3): local tech stack profiler + hiring tab from public ATS APIs",
+  "scripts": { "test": "node --test", "icons": "node tools/icons.js", "zip": "zip -r ../tech-stack-hiring.zip manifest.json popup src icons -x '*.test.js'" }
+}
